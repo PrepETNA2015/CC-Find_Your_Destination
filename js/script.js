@@ -1,6 +1,7 @@
 function showResult(str,type)
 {
 	var div =  document.getElementById(type+"_search");
+	var act = document.getElementById("activiter");
 	div.className = "visible";
 	if (str.length == 0)
 	  { 
@@ -15,7 +16,7 @@ function showResult(str,type)
 				document.getElementById(type+"_search").innerHTML=xmlhttp.responseText;
 			}
 		};
-	xmlhttp.open("GET","search.php?q="+str+"&type="+type,true);
+	xmlhttp.open("GET","search.php?q="+str+"&type="+type+"&act="+act,true);
 	xmlhttp.send();
 }
 var spe;
@@ -41,7 +42,7 @@ function fill_input(idd,valeur)
 				while (i < item)
 				 {
 					run();
-				 
+
 					add = spe[i].split("=");
 					sleep(10);
 				  codeAddress(add[0]+' '+add[1]+' '+add[2]+' fr',add[3]);
@@ -79,7 +80,7 @@ function tourisme(typo)
 	var input_ville = document.getElementById("ville"+"_input").value;
 
 	var response;
-	
+
 	xmlhttp=new XMLHttpRequest();
 	xmlhttp.onreadystatechange=function()
 		{
