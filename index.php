@@ -37,12 +37,9 @@ session_set_cookie_params(0);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!-- 
-				You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) 
                 <a class="navbar-brand logo-nav" href="index.php">
-                    <img src="http://placehold.it/150x75&text=Logo">
+                    <img src="http://www.aproxi.fr/img/rond-geoloc.png">
                 </a>
-				-->
             </div>
         </div>  
     </nav>
@@ -60,7 +57,7 @@ session_set_cookie_params(0);
 				<h2>Recherche Hôtels </h2>
 					<form class="form-group">
 						<div class="control-group">
-							<label class="control-label" >Choisez votre destination:</label>
+							<label class="control-label" >Choisez votre environnement:</label>
 							<select class="form-control" id="activiter">
 								<option value="0">Aucun option</option>
 								<option value="'cote'">Cote</option>

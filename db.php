@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-$pass = "";
+$pass = "root";
 $user = "root";
 $server = "localhost";
 $db = "travel";
@@ -10,6 +10,7 @@ try
 }
 catch (Exception $e)
 {
-        die('Erreur : ' . $e->getMessage());
+        //die('Erreur : ' . $e->getMessage());
+	die('Erreur : Service temporary unavailable');
 }
 ?>
