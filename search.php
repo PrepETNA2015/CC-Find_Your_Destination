@@ -3,10 +3,22 @@ include ('db.php');
 
 $query=$_GET["q"];
 $type=$_GET["type"];
+$activiter = $_GET["act"];
 
 if ($type == "dep")
 {
+	if ($type == 0)
+	{
 	$database_query = $bdd->query("SELECT departement_code,departement_nom FROM departement WHERE departement_code REGEXP '^" . $query . "' OR departement_nom REGEXP '^" . $query . "' LIMIT 0,5");
+	}
+	else{
+	
+	$database_query = $bdd->query("SELECT departement_code,departement_nom FROM departement 
+INNER JOIN (SELECT * from relief where type = ".$activiter.") r
+WHERE (departement_code REGEXP '^" . $query . "' 
+OR departement_nom REGEXP '^" . $query . "') AND `departement_code` LIKE CONCAT( r.code_postal,  '___' ) LIMIT 0,5"  );
+	}
+	
 	if (strlen($query)>0)
 	{
 	$hint="";
@@ -24,13 +36,23 @@ if ($type == "dep")
 	else
 	  {
 	  $response=$hint;
-	  
+
 	  }
 	echo $response;
 }
 if ($type == "ville")
 {
+	if ($type == 0)
+	{
 	$database_query = $bdd->query("SELECT DISTINCT COMMUNE FROM hotel WHERE COMMUNE REGEXP '^" . $query . "' LIMIT 0,5");
+	}
+	else
+	{
+	$database_query = $bdd->query("SELECT DISTINCT COMMUNE FROM hotel
+INNER JOIN (SELECT * from relief where type = ".$activiter.") r
+ WHERE COMMUNE REGEXP '^" . $query . "' 
+AND `CODE POSTAL` LIKE CONCAT( r.code_postal,  '___' ) LIMIT 0,5");
+	}
 	if (strlen($query)>0)
 	{
 	$hint="";
@@ -47,13 +69,24 @@ if ($type == "ville")
 	else
 	  {
 	  $response=$hint;
-	  
+
 	  }
 	echo $response;
 }
 if ($type == "hotel_nom")
 {
+	if ($type == 0)
+	{
 	$database_query = $bdd->query("SELECT `NOM COMMERCIAL` FROM hotel WHERE `NOM COMMERCIAL` REGEXP '^" . $query . "' LIMIT 0,5");
+	}
+	else
+	{
+	$database_query = $bdd->query("SELECT `NOM COMMERCIAL` FROM hotel 
+INNER JOIN (SELECT * from relief where type = ".$activiter.") r
+WHERE `NOM COMMERCIAL` REGEXP '^" . $query . "'
+AND `CODE POSTAL` LIKE CONCAT( r.code_postal,  '___' ) LIMIT 0,5");
+
+	}
 	if (strlen($query)>0)
 	{
 	$hint="";
@@ -70,7 +103,7 @@ if ($type == "hotel_nom")
 	else
 	  {
 	  $response=$hint;
-	  
+
 	  }
 	echo $response;
 }
