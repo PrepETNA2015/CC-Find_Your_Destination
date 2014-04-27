@@ -60,6 +60,14 @@ session_set_cookie_params(0);
 				<h2>Recherche Hôtels </h2>
 					<form class="form-group">
 						<div class="control-group">
+							<label class="control-label" >Choisez votre destination:</label>
+							<select class="form-control" id="et">
+								<option value="0">Aucun option</option>
+								<option value="cote">Cote</option>
+								<option value="montagne">Montagne</option>
+								<option value="'cote' AND type = 'montagne'">Cote et Montagne</option>
+						</div>
+						<div class="control-group">
 							<label class="control-label" >Étoiles:</label>
 							<select class="form-control" id="et">
 								<option value="0">Aucun option</option>
