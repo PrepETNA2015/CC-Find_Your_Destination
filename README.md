@@ -6,12 +6,12 @@ CC-Find_Your_Destination
 
 *Open DATA and Datascientiste*
 
-**This will be Bold**
+**LOG**
 
-- This will be a list item
-- This will be a list item
+- Filter 
+- Add more data
 
-    Add a indent and this will end up as code
+   
 
 
 
