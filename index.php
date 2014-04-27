@@ -66,6 +66,7 @@ session_set_cookie_params(0);
 								<option value="cote">Cote</option>
 								<option value="montagne">Montagne</option>
 								<option value="'cote' AND type = 'montagne'">Cote et Montagne</option>
+							</select>
 						</div>
 						<div class="control-group">
 							<label class="control-label" >Étoiles:</label>
