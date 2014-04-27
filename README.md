@@ -1,4 +1,19 @@
 CC-Find_Your_Destination
+==============
+
+
+--------------
+
+*Open DATA and Datascientiste*
+
+**This will be Bold**
+
+- This will be a list item
+- This will be a list item
+
+    Add a indent and this will end up as code
+
+
 
 DEV By
 
