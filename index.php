@@ -13,7 +13,7 @@ session_set_cookie_params(0);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TravelGo</title>
+    <title>FindYourDestination</title>
     <!-- API Google MAP -->
 		
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_KKhPDTUDZICpbiiZ8B-VVenk-H_CL0U&sensor=true"></script>
@@ -62,7 +62,7 @@ session_set_cookie_params(0);
 								<option value="0">Aucun option</option>
 								<option value="'cote'">Cote</option>
 								<option value="'montagne'">Montagne</option>
-								<option value="'cote' AND type = 'montagne'">Cote et Montagne</option>
+								<!--<option value="'cote' AND type = 'montagne'">Cote et Montagne</option>-->
 							</select>
 						</div>
 						<br />
