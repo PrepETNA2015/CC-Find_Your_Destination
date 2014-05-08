@@ -1,7 +1,7 @@
 function showResult(str,type)
 {
 	var div =  document.getElementById(type+"_search");
-	var act = document.getElementById("activiter");
+	var act = document.getElementById("activiter").value;
 	div.className = "visible";
 	if (str.length == 0)
 	  { 
@@ -16,6 +16,7 @@ function showResult(str,type)
 				document.getElementById(type+"_search").innerHTML=xmlhttp.responseText;
 			}
 		};
+		console.log(act);
 	xmlhttp.open("GET","search.php?q="+str+"&type="+type+"&act="+act,true);
 	xmlhttp.send();
 }
@@ -56,7 +57,7 @@ function fill_input(idd,valeur)
 		if (idd == "hotel_nom")
 		{
 			var res = valeur.replace(/%C2%A0/g," ");
-			xmlhttp.open("GET","filter.php?val="+encodeURIComponent(res)+"&type="+encodeURIComponent(idd),true);
+			xmlhttp.open("GET","filter.php?val="+encodeURIComponent(res)+"&type="+encodeURIComponent(idd)+"&etoile="+et,true);
 			xmlhttp.send();
 		}
 		else if (idd == "dep")
