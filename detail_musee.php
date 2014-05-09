@@ -24,7 +24,7 @@ $array[$i]["SITWEB"] = "http://".$array[$i]["SITWEB"];
 }
 $aff = $aff.'<h3>'.$array[$i]["NOM DU MUSEE"].'</h3>
 <p><span class="glyphicon glyphicon-home"></span> Adresse: '.$tab.'</p>
-<p><span class="glyphicon glyphicon-globe"></span> Site: <a href="'.$array[$i]["SITWEB"].'" target="_blank">'.$array[0]["SITWEB"].'</a></p>
+<p><span class="glyphicon glyphicon-globe"></span> Site: <a href="'.$array[$i]["SITWEB"].'" target="_blank">'.$array[$i]["SITWEB"].'</a></p>
 <p><span class="glyphicon glyphicon-info-sign"></span> Fermeture annuelle: '.$array[$i]["FERMETURE ANNUELLE"].'</p>
 <p><span class="glyphicon glyphicon-info-sign"></span> Période d\'ouverture: '.$array[$i]["PERIODE OUVERTURE"].'</p><br />';
 
