@@ -23,5 +23,6 @@ DEV By
 
 -WIESER Frank -- wieser_f@etna-alternance.net
 
+-Meénigault Louis -- meniga_l@etna-alternance.net
 
 Code Camp BigData (one week)
